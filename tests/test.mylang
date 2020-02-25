@@ -1,0 +1,11 @@
+* def myfn = 
+"""
+// TODO my inline comment
+
+function()
+{
+    // TODO my function comment
+    let val = 1;
+    console.log(val);
+}
+"""

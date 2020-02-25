@@ -1,0 +1,38 @@
+{
+    "name": "mylang-language",
+    "displayName": "mylang-language",
+    "description": "mylang-language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mylang",
+                "aliases": ["Mylang", "mylang"],
+                "extensions": [".mylang"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": 
+        [
+            {
+                "language": "mylang",
+                "scopeName": "source.mylang",
+                "path": "./syntaxes/mylang.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.javascript": "javascript"
+                }
+            },
+            {
+                "scopeName": "source.js.mylang",
+                "path": "./syntaxes/mylang-js.tmLanguage.json",
+                "injectTo": ["source.js"]
+            }
+        ]
+    }
+}

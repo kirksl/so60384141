@@ -1,0 +1,15 @@
+{
+  "scopeName": "source.js.mylang",
+  "injectionSelector": "L:source",
+  "patterns": [
+    {
+      "include": "#todo-keyword"
+    }
+  ],
+  "repository": {
+    "todo-keyword": {
+      "match": "TODO",
+      "name": "keyword.todo"
+    }
+  }
+}

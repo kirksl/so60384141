@@ -1,0 +1,45 @@
+{
+  "name": "Mylang",
+  "scopeName": "source.mylang",
+  "patterns": [
+    {
+      "include": "#def-keyword"
+    },
+    {
+      "include": "#fenced-expression"
+    }
+  ],
+  "repository": {
+    "def-keyword": {
+      "match": "def",
+      "name": "keyword.def"
+    },
+    "fenced-expression": {
+      "begin": "(^|\\G)\\s*[\"]{3}\\s*$",
+      "end": "(^|\\G)\\s*[\"]{3}\\s*$",
+      "contentName": "meta.embedded.block",
+      "beginCaptures": {
+        "0": {
+          "name": "string.quoted.triple.mylang"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "string.quoted.triple.mylang"
+        }
+      },
+      "patterns": [
+        {
+          "begin": "^(\\s*)(?=[\\S&&[^{<\\[]])",
+          "while": "^(?!\\s*[\"]{3}\\s*)",
+          "contentName": "meta.embedded.block.javascript",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
