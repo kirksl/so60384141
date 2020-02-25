@@ -31,7 +31,7 @@
             {
                 "scopeName": "source.js.mylang",
                 "path": "./syntaxes/mylang-js.tmLanguage.json",
-                "injectTo": ["source.js"]
+                "injectTo": ["source.js", "source.mylang"]
             }
         ]
     }

@@ -1,6 +1,6 @@
 {
   "scopeName": "source.js.mylang",
-  "injectionSelector": "L:source",
+  "injectionSelector": "L:comment.line.double-slash.js",
   "patterns": [
     {
       "include": "#todo-keyword"
